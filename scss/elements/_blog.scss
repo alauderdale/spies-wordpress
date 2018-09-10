@@ -1,0 +1,26 @@
+$base-blog-font-size: 13pt;
+$base-blog-line-height: 21pt;
+
+.blog-styles{
+	p{
+		font-size:$base-blog-font-size;
+		line-height:$base-blog-line-height;
+	}
+	h1,h2,h3,h4,h5,h6{
+		margin-bottom:$baseline;
+		margin-top:$baseline*2;
+		font-weight:600;
+	}
+	ul{
+		padding-top:.5rem;
+		padding-bottom:.5rem;
+		list-style:none;
+		li{
+			padding-left:20px;
+			background:url('../images/chevron-purple.svg') left 5px no-repeat;
+			margin-bottom:$baseline;
+			font-size:$base-blog-font-size;
+			line-height:18px;
+		}
+	}
+}

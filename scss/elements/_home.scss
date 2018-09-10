@@ -1,0 +1,21 @@
+.home-hero{
+	background-size:cover!important;
+	position:relative;
+	&:before{
+		content:"";
+		background:url("../images/mountains.svg");
+		width:664px;
+		height:168px;
+		position:absolute;
+		right:20px;
+		bottom:-20px;
+	}
+}
+
+
+.home-people{
+	background:$off-white-color url(../images/people-bg-bottom.svg) bottom center no-repeat;
+	background-size:cover;
+}
+
+

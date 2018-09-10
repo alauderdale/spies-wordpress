@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>card-icon-special</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-259.000000, -940.000000)">
+            <g id="card-icon-special" transform="translate(259.000000, 940.000000)">
+                <circle id="Oval-2" fill="#6F0865" cx="49" cy="49" r="49"></circle>
+                <g id="Group-305" transform="translate(32.000000, 29.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M21,35 L21,38.999079 C21,41.2095326 19.2095326,43 17.000921,43 C14.7923095,43 13,41.2095326 13,38.999079 L13,35" id="Stroke-2832"></path>
+                    <path d="M21.9987721,34 C21.9987721,34 22.0337682,30.1088514 26.5280123,25.5833973 L26.5243285,25.5833973 C28.6701458,23.4004221 30,20.3995267 30,17.0833333 C30,10.4101433 24.6271681,5 18,5 C11.37099,5 6,10.4101433 6,17.0833333 C6,20.3995267 7.32801228,23.4004221 9.47567153,25.5833973 L9.47198772,25.5833973 C14.019647,30.1626375 13.999386,34 13.999386,34" id="Stroke-2833"></path>
+                    <path d="M23,36 L13,37.484" id="Stroke-2834"></path>
+                    <path d="M23,33 L13,34.478" id="Stroke-2835"></path>
+                    <path d="M22,39 L14,40.276" id="Stroke-2836"></path>
+                    <path d="M33,17 L34.862,17" id="Stroke-2837"></path>
+                    <path d="M0,17 L1.86,17" id="Stroke-2838"></path>
+                    <path d="M18,1.86 L18,0" id="Stroke-2839"></path>
+                    <path d="M29,5.392 L30.392,4" id="Stroke-2840"></path>
+                    <path d="M5,30.44 L6.44,29" id="Stroke-2841"></path>
+                    <path d="M29,29 L30.412,30.412" id="Stroke-2842"></path>
+                    <path d="M5,4 L6.578,5.578" id="Stroke-2843"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

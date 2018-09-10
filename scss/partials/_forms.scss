@@ -1,0 +1,33 @@
+.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-append>.btn, .input-group-lg>.input-group-append>.input-group-text, .input-group-lg>.input-group-prepend>.btn, .input-group-lg>.input-group-prepend>.input-group-text{
+	border-radius:0px;
+}
+
+.form-control{
+
+}
+
+//promo
+
+.primary-promo{
+	background:$primary-color url("../images/promo-bg.svg") bottom center no-repeat!important;
+}
+
+//contact page
+
+.map{
+	position:relative;
+}
+
+.contact-detils-panel{
+	background:white;
+	padding:20px;
+	position:absolute;
+	bottom:-80px;
+	left:20px;
+	@include breakpoint(sm) {
+		position:relative;
+		padding:0;
+		bottom:0;
+		left:0;
+	}
+}

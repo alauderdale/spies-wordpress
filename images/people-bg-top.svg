@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="306px" viewBox="0 0 1400 306" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1400" height="328"></rect>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(0.000000, -22.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill-opacity="0" fill="#D8D8D8" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(0.000000, 22.000000)">
+                    <polyline id="Path-2" fill="#F8F8F5" transform="translate(982.500000, 222.000000) scale(-1, 1) translate(-982.500000, -222.000000) " points="528 306 646.337948 227.863766 747.590703 266.931883 995.229194 138 1437 306"></polyline>
+                    <path d="M1400,975.743388 L1400,1751 L0,1474.35075 L0,668 L0,0 L1400,307.743388 L1400,975.743388 Z" id="Combined-Shape" fill="#FCFCFB"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

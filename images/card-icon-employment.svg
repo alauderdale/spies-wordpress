@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="94px" viewBox="0 0 94 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>card-icon-employment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1041.000000, -943.000000)">
+            <g id="card-icon-employment" transform="translate(1041.000000, 943.000000)">
+                <circle id="Oval-2" fill="#6F0865" cx="47" cy="47" r="47"></circle>
+                <g id="Group-6" transform="translate(26.000000, 27.000000)" stroke="#FFFFFF" stroke-width="2">
+                    <path d="M42,36.1213535 C42,38.2635157 40.2668255,40 38.1287463,40 L3.87125371,40 C1.73317446,40 1.0658141e-14,38.2635157 1.0658141e-14,36.1213535 L1.0658141e-14,12.8786465 C1.0658141e-14,10.7364843 1.73317446,9 3.87125371,9 L38.1287463,9 C40.2668255,9 42,10.7364843 42,12.8786465 L42,36.1213535 L42,36.1213535 Z" id="Shape"></path>
+                    <path d="M13,5 L13,4.09714095 C13,1.83430864 15.0697218,-1.77635684e-15 17.6230385,-1.77635684e-15 L24.3769615,-1.77635684e-15 C26.9300999,-1.77635684e-15 29,1.83430864 29,4.09714095 L29,5" id="Shape"></path>
+                    <path d="M24,22 L39.1201882,22" id="Shape"></path>
+                    <path d="M3.10464444,22 L19.0693444,22" id="Shape"></path>
+                    <path d="M23.999801,23.201983 C23.999801,23.6426913 23.5714144,24 23.0425468,24 L18.9570552,24 C18.4283867,24 18,23.6426913 18,23.201983 L18,19.7975196 C18,19.3569771 18.4283867,19 18.9570552,19 L23.0427458,19 C23.5714144,19 24,19.3569771 24,19.7975196 L24,23.201983 L23.999801,23.201983 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

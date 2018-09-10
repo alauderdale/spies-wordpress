@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="99px" viewBox="0 0 99 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>card-icon-insurance</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-648.000000, -940.000000)">
+            <g id="card-icon-insurance" transform="translate(648.000000, 940.000000)">
+                <circle id="Oval-2" fill="#6F0865" cx="49.5" cy="49.5" r="49.5"></circle>
+                <g id="Group-11" transform="translate(24.000000, 26.000000)" stroke="#FFFFFF" stroke-width="2">
+                    <g id="Group-5">
+                        <path d="M41.4686995,18.3090287 L41.1798193,18.0211388 C40.5698587,17.4140427 39.6336659,17.3327303 38.9326253,17.7726232 L24.1425081,3.05177949 C24.5852125,2.35531301 24.5033324,1.42296727 23.8935559,0.815871197 L23.6037556,0.528530702 C22.895539,-0.176176901 21.747746,-0.176176901 21.0395294,0.528530702 L11.0304725,10.4905836 C10.3231758,11.1945586 10.3231758,12.3384265 11.0304725,13.0431341 L11.3202727,13.3304746 C11.9276573,13.9350068 12.8590661,14.0163192 13.5578987,13.5832024 L28.3527999,28.3077088 C27.9174555,29.0041753 27.9991516,29.9302944 28.6065361,30.5355591 L28.8954164,30.823449 C29.603633,31.5294386 30.752346,31.5294386 31.4603786,30.823449 L41.4686995,20.8623118 C42.1771002,20.1570548 42.1771002,19.01337 41.4686995,18.3090287" id="Shape"></path>
+                        <path d="M17.7692308,23.3137255 L-1.77635684e-14,41" id="Shape"></path>
+                        <path d="M27.4615385,28.1372549 L37.9615385,17.6862745" id="Shape"></path>
+                        <path d="M12.9230769,12.8627451 L23.4230769,2.41176471" id="Shape"></path>
+                    </g>
+                    <path d="M25.4,41 L56.6102547,41" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M32.3913043,37 L49.258292,37" id="Line-2" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
