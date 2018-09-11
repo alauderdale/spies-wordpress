@@ -7,8 +7,10 @@ Template Name: Home
 <?php get_header(); ?>
 
 
+
+
 <div id='main'>
-	<section class='inverse-section home-hero mark-effect' style='background-image:url(<?php bloginfo('template_url'); ?>/images/home-hero-bg.png);'>
+	<section class='inverse-section home-hero mark-effect' style='background-image:url(<?php the_field('hero_image');?>);'>
 		<div class='container'>
 			<div class='row'>
 				<div class='col-xl-6 col-lg-8'>
@@ -16,13 +18,14 @@ Template Name: Home
 						Welcome
 					</h4>
 					<h1 class='margin-bottom bold-font'>
-						World Class Counsel When it Counts
+						
+						<?php the_field('title_text');?>
 					</h1>
 					<h3>
-						Serving Denver, Boulder, Greeley, Colorado Springs, Fort Collins and all of Colorado.
+						<?php the_field('lead_copy');?>
 					</h3>
-					<a class='btn btn-lg btn-outline-light double-margin-top' href='#'>
-						Request a consultation
+					<a class='btn btn-lg btn-outline-light double-margin-top' href='<?php the_field('consultation_cta_link', 'option'); ?>'>
+						<?php the_field('consultation_cta_text', 'option'); ?>
 					</a>
 				</div>
 			</div>
@@ -33,74 +36,59 @@ Template Name: Home
 			<div class='row justify-content-md-center'>
 				<div class='col-lg-8'>
 					<h4 class='bold-font text-center'>
-						How can we help?
+						<?php the_field('practice_teaser_title'); ?>
 					</h4>
 					<h2 class='text-center'>
-						We’re committed to fairly practicing the law. Our expertise extends to several areas, including:
+						<?php the_field('practice_teaser_text'); ?>
 					</h2>
 				</div>
 			</div>
 			<div class='industry-cards'>
 				<div class='row'>
 					<div class='col-lg-12'>
-						<div class='card-deck'>
-							<div class='card service-card position-relative double-padding-top'>
-								<div class='card-icon'>
-									<img src='<?php bloginfo('template_url'); ?>/images/card-icon-special.svg'>
-								</div>
-								<div class='card-body'>
-									<h4 class='card-title bold-font'>
-										Special education law
-									</h4>
-									<p class='card-text light-text-color'>
-										magnam veniam labore consectetur voluptates qui ut quo vero dolor
-									</p>
-								</div>
-								<div class='card-footer'>
-									<a class='card-link' href='#'>
-										Learn more
-									</a>
-								</div>
+						<?php if( have_rows('feature_practices') ): ?>
+							<div class='card-deck'>
+								<?php 
+
+								while( have_rows('feature_practices') ): the_row(); 
+
+					// vars
+								$icon = get_sub_field('icon');
+
+								$title = get_sub_field('title');
+
+								$text = get_sub_field('text');
+
+								$pageLink = get_sub_field('page_link');
+
+								?>
+									<div class='card service-card position-relative double-padding-top'>
+										<div class='card-icon'>
+											<a href="<?php echo $pageLink; ?>">
+												<img src='<?php echo $icon; ?>'>
+											</a>
+										</div>
+										<div class='card-body'>
+											<a href="<?php echo $pageLink; ?>">
+												<h4 class='card-title bold-font'>
+													<?php echo $title; ?>
+												</h4>
+												<p class='card-text light-text-color'>
+													<?php echo $text; ?>
+												</p>
+											</a>
+										</div>
+										<div class='card-footer'>
+											<a class='card-link' href='<?php echo $pageLink; ?>'>
+												Learn more
+											</a>
+										</div>
+									</div>
+								<?php endwhile; ?>
 							</div>
-							<div class='card service-card position-relative double-padding-top'>
-								<div class='card-icon'>
-									<img src='<?php bloginfo('template_url'); ?>/images/card-icon-special.svg'>
-								</div>
-								<div class='card-body'>
-									<h4 class='card-title bold-font'>
-										Special education law
-									</h4>
-									<p class='card-text light-text-color'>
-										esse nihil deleniti et qui asperiores ea minima ut sunt
-									</p>
-								</div>
-								<div class='card-footer'>
-									<a class='card-link' href='#'>
-										Learn more
-									</a>
-								</div>
-							</div>
-							<div class='card service-card position-relative double-padding-top'>
-								<div class='card-icon'>
-									<img src='<?php bloginfo('template_url'); ?>/images/card-icon-special.svg'>
-								</div>
-								<div class='card-body'>
-									<h4 class='card-title bold-font'>
-										Special education law
-									</h4>
-									<p class='card-text light-text-color'>
-										perferendis excepturi et exercitationem veritatis dolores rerum a quas impedit
-									</p>
-								</div>
-								<div class='card-footer'>
-									<a class='card-link' href='#'>
-										Learn more
-									</a>
-								</div>
-							</div>
-						</div>
+						<?php endif; ?>
 						<div class='text-center double-margin-top double-padding-top'>
-							<a class='btn btn-lg btn-dark' href='/practice-areas'>
+							<a class='btn btn-lg btn-dark' href='<?php the_field('view_all_practices_link'); ?>'>
 								View all practice areas
 							</a>
 						</div>
@@ -115,141 +103,43 @@ Template Name: Home
 			<div class='row justify-content-md-center double-margin-bottom'>
 				<div class='col-lg-8'>
 					<h4 class='bold-font text-center'>
-						Our legal team
+						<?php the_field('legal_team_title'); ?>
 					</h4>
 					<h2 class='text-center'>
-						Aliquam vehicula dictum diam, at ornare sem condimentum ut.
+						<?php the_field('legal_team_text'); ?>
 					</h2>
 				</div>
 			</div>
 			<div class='people-cards'>
 				<div class='row'>
+					<?php $teamLoop = new WP_Query( array('post_type' => 'team') ); ?>
+					<?php while ( $teamLoop->have_posts() ) : $teamLoop->the_post(); ?>
 					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
+						<a href='<?php the_permalink();?>'>
 							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
 								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-jan.png' width='153px'>
+									<img class='double-margin-bottom' src='<?php the_field('avatar_small');?>' width='153px'>
 									<h3 class='card-title text-color'>
-										Janet R. Spies
+										 <?php the_title();?>
 									</h3>
 									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Partner
+										<?php the_field('title');?>
 									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
+									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:<?php the_field('email');?>&#39;; return false'>
 										email
 									</i>
 									<h5 class='card-text light-text-color'>
-										iure quas sit iusto sit beatae culpa in modi sint a deserunt ipsa molestiae ut est et consequatur
+										<?php
+										$content = get_the_content();
+										echo substr($content, 0, 200);
+										?>
 									</h5>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
-							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
-								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-brendon.png' width='153px'>
-									<h3 class='card-title text-color'>
-										Brendan O. Powers
-									</h3>
-									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Partner
-									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
-										email
-									</i>
-									<h5 class='card-text light-text-color'>
-										itaque et perspiciatis velit occaecati corporis voluptas maxime expedita amet ex vel autem sit voluptatem qui totam in
-									</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
-							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
-								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-jack.png' width='153px'>
-									<h3 class='card-title text-color'>
-										Jack D. Robinson
-									</h3>
-									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Partner
-									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
-										email
-									</i>
-									<h5 class='card-text light-text-color'>
-										assumenda illo ab atque necessitatibus perspiciatis nesciunt quibusdam qui rerum beatae nulla quisquam ad et voluptates debitis magnam
-									</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
-							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
-								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-4.png' width='153px'>
-									<h3 class='card-title text-color'>
-										Priscilla Tomescu
-									</h3>
-									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Associate
-									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
-										email
-									</i>
-									<h5 class='card-text light-text-color'>
-										qui maiores perferendis aut assumenda consequuntur labore ducimus ipsa autem modi velit mollitia a consequatur itaque quia doloremque
-									</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
-							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
-								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-5.png' width='153px'>
-									<h3 class='card-title text-color'>
-										Ursula Honigman
-									</h3>
-									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Associate
-									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
-										email
-									</i>
-									<h5 class='card-text light-text-color'>
-										magni dolorem ea iure dignissimos magnam nemo non aut iusto tempora expedita recusandae quo aut rerum et aspernatur
-									</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class='col-lg-4 col-md-6'>
-						<a href='/styles'>
-							<div class='card person-card position-relative card-grid-card shadowed-card-link'>
-								<div class='card-body'>
-									<img class='double-margin-bottom' src='<?php bloginfo('template_url'); ?>/images/people/thumb-6.png' width='153px'>
-									<h3 class='card-title text-color'>
-										First Last
-									</h3>
-									<h5 class='card-subtitle light-text-color half-margin-bottom'>
-										Associate
-									</h5>
-									<i class='material-icons mail-link' onclick='document.location.href = &#39;mailto:john@doe.com&#39;; return false'>
-										email
-									</i>
-									<h5 class='card-text light-text-color'>
-										vel earum nobis animi consequatur libero esse facilis sapiente corporis est exercitationem laboriosam amet sequi incidunt consectetur et
-									</h5>
-								</div>
-							</div>
-						</a>
-					</div>
+					<?php wp_reset_postdata(); ?>
+					<?php endwhile; // end of the loop. ?>
 				</div>
 			</div>
 		</div>
@@ -258,7 +148,7 @@ Template Name: Home
 		<div class='container'>
 			<div class='row'>
 				<div class='col-md-6'>
-					<img class='max-width' src='<?php bloginfo('template_url'); ?>/images/home-img-1.png'>
+					<img class='max-width' src='<?php the_field('about_image');?>'>
 				</div>
 				<div class='col-md-1'>
 					<div class='d-none d-md-inline'>
@@ -268,13 +158,13 @@ Template Name: Home
 				<div class='col-md-5'>
 					<div class='double-margin-top'>
 						<h2>
-							Our promise
+							<?php the_field('about_title'); ?>
 						</h2>
 						<p>
-							Aliquam vehicula dictum diam, at ornare sem condimentum ut. Aenean blandit consectetur dui ut fermentum. Curabitur sodales orci eget odio.
+							<?php the_field('about_text'); ?>
 						</p>
 						<h3>
-							<a class='link-underline' href='/about'>
+							<a class='link-underline' href='<?php the_field('about_link'); ?>'>
 								Learn more about us
 							</a>
 						</h3>
@@ -285,7 +175,6 @@ Template Name: Home
 	</section>
 	<?php get_template_part( 'content', 'promo' ); ?>
 </div>
-
 
 
 <?php get_footer(); ?>

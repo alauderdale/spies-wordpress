@@ -225,7 +225,31 @@ add_action( 'pre_get_posts', 'my_post_queries' );
 
 
 
+// CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
+ 
+    function isacustom_excerpt_length($length) {
+    global $post;
+    if ($post->post_type == 'post')
+    return 32;
+    else if ($post->post_type == 'team')
+    return 20;
+    else
+    return 80;
+    }
+    add_filter('excerpt_length', 'isacustom_excerpt_length');
 
+
+
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
 

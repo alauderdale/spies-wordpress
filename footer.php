@@ -11,7 +11,7 @@
           <div class='col-md-2'>
             <img class='half-margin-bottom' src='<?php the_field('logo_icon', 'option'); ?>' width='68px'>
             <h6 class='white-text-color'>
-              © SPR 2018
+              © SPR <?php echo date("Y"); ?>
             </h6>
           </div>
           <div class='col-md-2'>

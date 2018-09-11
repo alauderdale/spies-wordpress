@@ -30,7 +30,7 @@ function create_my_post_types() {
       'taxonomies' => array('category'), 
       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' )
     );
-    register_post_type( 'Practice-areas', $port_args );
+    register_post_type( 'practice-areas', $port_args );
     
 
 }
