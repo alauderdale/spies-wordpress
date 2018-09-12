@@ -31,6 +31,15 @@ function create_my_post_types() {
       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' )
     );
     register_post_type( 'practice-areas', $port_args );
+
+        //practice areas
+    $port_args = array(
+      'public' => true,
+      'label'  => 'Resources',
+      'taxonomies' => array('category'), 
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' )
+    );
+    register_post_type( 'resources', $port_args );
     
 
 }

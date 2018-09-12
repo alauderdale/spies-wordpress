@@ -33,6 +33,7 @@ function boiler_setup() {
 	register_nav_menus( array(
 		'menu-primary' => __( 'Primary Menu', 'boiler' ),
 		'menu-company' => __( 'Company menu', 'boiler' ),
+		'menu-sidebar-practices' => __( 'Sidebar practices menu', 'boiler' ),
 		'menu-practice' => __( 'Practice menu', 'boiler' )
 	) );
 
@@ -204,23 +205,23 @@ add_filter('terms_clauses', 'df_terms_clauses', 10, 3);
 
 ///for pagination and use of the category.php as blog index
 
-function my_post_queries( $query ) {
-  // do not alter the query on wp-admin pages and only alter it if it's the main query
-  if (!is_admin() && $query->is_main_query()){
+// function my_post_queries( $query ) {
+//   // do not alter the query on wp-admin pages and only alter it if it's the main query
+//   if (!is_admin() && $query->is_main_query()){
 
-    // alter the query for the home and category pages 
+//     // alter the query for the home and category pages 
 
-    if(is_home()){
-      $query->set('posts_per_page', 10);
-    }
+//     if(is_home()){
+//       $query->set('posts_per_page', 10);
+//     }
 
-    if(is_category()){
-      $query->set('posts_per_page', 10);
-    }
+//     if(is_category()){
+//       $query->set('posts_per_page', 10);
+//     }
 
-  }
-}
-add_action( 'pre_get_posts', 'my_post_queries' );
+//   }
+// }
+// add_action( 'pre_get_posts', 'my_post_queries' );
 
 
 
@@ -230,7 +231,7 @@ add_action( 'pre_get_posts', 'my_post_queries' );
     function isacustom_excerpt_length($length) {
     global $post;
     if ($post->post_type == 'post')
-    return 32;
+    return 100;
     else if ($post->post_type == 'team')
     return 20;
     else
@@ -256,5 +257,39 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
 
+
+
+ 
+function sa_get_bootstrap_paginate_links() {
+	ob_start();
+	?>
+		<div class="pages clearfix">
+			<?php
+				global $wp_query;
+				$current = max( 1, absint( get_query_var( 'paged' ) ) );
+				$pagination = paginate_links( array(
+					'base' => str_replace( PHP_INT_MAX, '%#%', esc_url( get_pagenum_link( PHP_INT_MAX ) ) ),
+					'format' => '?paged=%#%',
+					'current' => $current,
+					'total' => $wp_query->max_num_pages,
+					'type' => 'array',
+					'prev_text' => '&laquo;',
+					'next_text' => '&raquo;',
+				) ); ?>
+			<?php if ( ! empty( $pagination ) ) : ?>
+				<ul class="pagination">
+					<?php foreach ( $pagination as $key => $page_link ) : ?>
+						<li class="paginated_link<?php if ( strpos( $page_link, 'current' ) !== false ) { echo ' active'; } ?>"><?php echo $page_link ?></li>
+					<?php endforeach ?>
+				</ul>
+			<?php endif ?>
+		</div>
+	<?php
+	$links = ob_get_clean();
+	return apply_filters( 'sa_bootstap_paginate_links', $links );
+}
+function sa_bootstrap_paginate_links() {
+	echo sa_get_bootstrap_paginate_links();
+}
 
 

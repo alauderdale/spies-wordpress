@@ -51,7 +51,7 @@ ul.side-nav-primary{
 				background-color:shade($primary-color,20%);
 			}
 		}
-		&.active{
+		&.active, &.current-menu-item{
 			a{
 				font-weight:700;
 			}
@@ -72,6 +72,9 @@ ul.side-nav-primary{
 				}
 			}
 		}
+	}
+	li.current-menu-item ul.sub-menu li a{
+		font-weight:500!important;
 	}
 }
 
@@ -96,5 +99,28 @@ ul.pagination{
 		a{
 			color:$primary-color;
 		}
+	}
+}
+
+
+.default-pagination{
+	margin:0 auto;
+	text-align:center;
+	a{
+		margin:0 5px;
+		position:relative;
+	}
+	.prev, .next{
+		color:$light-gray-color;
+		font-size:40px;
+		font-weight:900;
+		top:4px;
+	}
+	.current{
+		color:$primary-color;
+		font-size:30px;
+		font-weight:600;
+		position:relative;
+		top:2px;
 	}
 }
