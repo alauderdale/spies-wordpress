@@ -45,7 +45,7 @@ Template Name: Practice areas
 													<?php the_title();?>
 												</h3>
 												<h5 class='card-text light-text-color'>
-													<?php the_field('lead');?>
+													<?php the_field('lead_copy');?>
 												</h5>
 												<button class='btn btn-lg btn-outline-dark btn-block double-margin-top' type='button' onclick'window.location.href="<?php the_permalink();?>">
 													Learn more

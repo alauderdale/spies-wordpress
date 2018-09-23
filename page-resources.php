@@ -21,7 +21,7 @@ Template Name: Resources
 			</div>
 			<div class='row'>
 				<div class='col-md-12'>
-					<div class='row'>
+					<div class='row justify-content-center'>
 						<?php $resourceLoop = new WP_Query( array('post_type' => 'resources') ); ?>
 						<?php while ( $resourceLoop->have_posts() ) : $resourceLoop->the_post(); ?>
 							<div class='col-lg-3 col-md-4 col-sm-6'>
