@@ -10,6 +10,9 @@
 
 .primary-promo{
 	background:$primary-color url("../images/promo-bg.svg") bottom center no-repeat!important;
+	a{
+		color:white!important;
+	}
 }
 
 //contact page

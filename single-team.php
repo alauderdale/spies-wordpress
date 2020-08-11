@@ -25,7 +25,7 @@ get_header(); ?>
 									</li>
 									<li class='breadcrumb-item'>
 										<a href='<?php the_field('team_page_link', 'option'); ?>'>
-											Attourneys
+											Attorneys
 										</a>
 									</li>
 									<li aria-current='page' class='breadcrumb-item active'>

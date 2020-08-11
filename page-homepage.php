@@ -14,9 +14,9 @@ Template Name: Home
 		<div class='container'>
 			<div class='row'>
 				<div class='col-xl-6 col-lg-8'>
-					<h4 class='medium-font line-above position-relative'>
+<!-- 					<h4 class='medium-font line-above position-relative'>
 						Welcome
-					</h4>
+					</h4> -->
 					<h1 class='margin-bottom bold-font'>
 						
 						<?php the_field('title_text');?>

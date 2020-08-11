@@ -1,4 +1,4 @@
-<section class='inverse-section primary-promo'>
+<!-- <section class='inverse-section primary-promo'>
 	<div class='container'>
 		<div class='row'>
 			<div class='col-md-8 col-lg-9'>
@@ -19,4 +19,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
